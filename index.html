@@ -240,6 +240,43 @@
       border-radius: 4px;
     }
 
+    .downloads {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+
+    .download {
+      display: flex;
+      min-height: 108px;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfd;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .download:hover {
+      border-color: #8aa6bd;
+      background: #f3f7fa;
+    }
+
+    .download b {
+      display: block;
+      font-size: 14px;
+      line-height: 1.35;
+    }
+
+    .download span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
     .svg-wrap {
       display: grid;
       place-items: center;
@@ -255,7 +292,7 @@
 
     @media (max-width: 900px) {
       .span-4, .span-5, .span-6, .span-7, .span-8 { grid-column: span 12; }
-      .score, .flow { grid-template-columns: 1fr; }
+      .score, .flow, .downloads { grid-template-columns: 1fr; }
       .statline { grid-template-columns: 1fr; gap: 2px; }
     }
   </style>
@@ -335,6 +372,32 @@
           <div class="card"><strong>40</strong><span>성능·품질</span></div>
           <div class="card"><strong>20</strong><span>설치·운영</span></div>
           <div class="card"><strong>20</strong><span>A/S·교육</span></div>
+        </div>
+      </section>
+
+      <section class="span-12">
+        <h2>자료 다운로드</h2>
+        <div class="downloads">
+          <a class="download" href="downloads/notice.pdf" download>
+            <b>공고문</b>
+            <span>PDF 다운로드</span>
+          </a>
+          <a class="download" href="downloads/specification.pdf" download>
+            <b>물품 규격서</b>
+            <span>PDF 다운로드</span>
+          </a>
+          <a class="download" href="downloads/proposal-light-draft.docx" download>
+            <b>제안서 라이트 초안</b>
+            <span>DOCX 다운로드</span>
+          </a>
+          <a class="download" href="downloads/spec-compliance-table.docx" download>
+            <b>규격 대응표 초안</b>
+            <span>DOCX 다운로드</span>
+          </a>
+          <a class="download" href="downloads/required-materials-checklist.md" download>
+            <b>추가 필요자료 체크리스트</b>
+            <span>MD 다운로드</span>
+          </a>
         </div>
       </section>
 
